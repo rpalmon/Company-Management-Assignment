@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeadquartersCardComponent } from './headquarters-card/headquarters-card.component';
 import { IndexComponent } from './index/index.component';
 import { CompanyComponentComponent } from './company-component/company-component.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CompanyComponentComponent } from './company-component/company-component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     Title

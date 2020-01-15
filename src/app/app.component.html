@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<body>
+  <div *ngIf="title=='CompanyManagementAssignment'">
+      <a routerLink="/hq" routerLinkActive="active">Go To HQ</a>
+      <a routerLink="/company" routerLinkActive="active">Go To Company</a>
+  </div>
+
+  <router-outlet></router-outlet>
+</body>
