@@ -1,12 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeadquartersCardComponent } from './headquarters-card/headquarters-card.component';
+import { IndexComponent } from './index/index.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadquartersCardComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
