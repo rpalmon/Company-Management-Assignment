@@ -10,9 +10,13 @@ import { IndexComponent } from './index/index.component';
 import { CompanyComponentComponent } from './company-component/company-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialTestingComponent } from './material-testing/material-testing.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 //Material
 import { MatSliderModule } from '@angular/material/slider';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { MatSliderModule } from '@angular/material/slider';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatMenuModule,
+    FormsModule,
+    CommonModule
+
   ],
   providers: [
     Title

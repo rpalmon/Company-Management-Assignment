@@ -1,3 +1,12 @@
 <title>Company Management: HQ</title>
-<p>headquarters-card works!</p>
-<a routerLink="/" routerLinkActive="active">Go Back</a>
+<br>
+
+
+Company Name: <input type="text" [(ngModel)]="name">
+<button (click)="addCompany()">Add</button>
+
+<h1>Companies: </h1>
+<p *ngFor="let company of Hq.companies;let i = index" [(ngModel)]="company[i]">Company {{i+1}}: {{company}}
+<button (click)="deleteCompany(i)">Delete</button>
+<button (click)="editCompany(i)">Edit</button>
+</p>

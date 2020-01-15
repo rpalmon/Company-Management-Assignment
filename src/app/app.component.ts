@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'CompanyManagementAssignment';
-  
+
   constructor(private titleService: Title) {}
 
   setDocTitle(title: string) {
