@@ -1,24 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {Title} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadquartersCardComponent } from './headquarters-card/headquarters-card.component';
 import { IndexComponent } from './index/index.component';
+import { CompanyComponentComponent } from './company-component/company-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadquartersCardComponent,
-    IndexComponent
+    IndexComponent,
+    CompanyComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
