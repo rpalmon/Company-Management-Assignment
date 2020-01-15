@@ -7,6 +7,6 @@ Company Name: <input type="text" [(ngModel)]="name">
 
 <h1>Companies: </h1>
 <p *ngFor="let company of Hq.companies;let i = index" [(ngModel)]="company[i]">Company {{i+1}}: {{company}}
-<button (click)="deleteCompany(i)">Delete</button>
-<button (click)="editCompany(i)">Edit</button>
+  <button (click)="editCompany(i)">Edit</button>
+  <button (click)="deleteCompany(i)">Delete</button>
 </p>

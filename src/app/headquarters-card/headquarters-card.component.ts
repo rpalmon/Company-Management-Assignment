@@ -10,31 +10,35 @@ export class HeadquartersCardComponent implements OnInit {
 
   constructor() { }
 
-  name: string = "";
+  name = '';
   company: any;
 
   Hq: HQ = new HQ();
 
   ngOnInit() {
-    this.Hq.name = "HQ";
+    this.Hq.name = 'HQ';
     this.Hq.companies = [
 
-    ]
+    ];
+    this.Hq = JSON.parse(localStorage.getItem('Hq'));
   }
 
   addCompany(){
     this.Hq.companies.push(this.name);
-    this.name = "";
     console.dir(this.Hq);
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
+
   }
 
   deleteCompany(index){
     console.log(this.Hq.companies[index]);
     this.Hq.companies.splice(index, 1);
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
   }
 
   editCompany(index){
     this.Hq.companies[index] = prompt('Edit '+ this.Hq.companies[index]);
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
   }
 
 }
