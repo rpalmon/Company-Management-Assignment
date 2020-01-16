@@ -1,7 +1,3 @@
-input{
-  margin: 5px;
-}
-
-button{
+.companies>div>button{
   margin: 5px;
 }

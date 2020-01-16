@@ -1,7 +1,7 @@
 <title>Company Management: HQ</title>
 <br>
 
-<!-- 
+<!--
 Company Name: <input autofocus type="text" [(ngModel)]="name" (keyup.enter)="addCompany()">
 <button (click)="addCompany()">Add</button> -->
 
@@ -10,14 +10,17 @@ Company Name: <input autofocus type="text" [(ngModel)]="name" (keyup.enter)="add
       <span class="input-group-text" id="basic-addon1">Company Name: </span>
     </div>
     <input [(ngModel)]="name" type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1" (keyup.enter)="addCompany()">
-    <button (click)="addCompany()" type="button" class="btn btn-secondary">Secondary</button>
+    <button (click)="addCompany()" type="button" class="btn btn-secondary">Add Company</button>
 
 </div>
 
-<h1>Companies: </h1>
-<div *ngFor="let company of Hq.companies, let i = index">
-  Company {{i+1}}: {{Hq.companies[i]}}
-  <button (click)="editCompany(i)">Edit</button>
-  <button (click)="deleteCompany(i)">Delete</button>
-</div>
 
+
+<div class="companies">
+  <h1>Companies: </h1>
+  <div *ngFor="let company of Hq.companies, let i = index">
+    Company {{i+1}}: {{Hq.companies[i]}}
+    <button (click)="editCompany(i)">Edit</button>
+    <button (click)="deleteCompany(i)">Delete</button>
+  </div>
+</div>
