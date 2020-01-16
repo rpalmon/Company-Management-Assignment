@@ -11,3 +11,25 @@
       </div>
     </div>
 </div>
+
+<div>
+  <div *ngIf="SelectedCompany != undefined">
+    <table class="table">
+      <tr>
+        <th scope="col" style="width: 150px;">Modify</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Wage</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let employees of SelectedCompany">
+          <th>{{employees.FirstName}}</th>
+          <th>{{employees.LastName}}</th>
+          <th>{{employees.Wage}}</th>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary btn-lg btn-block">Add New Employee</button>
+  </div>
+
+</div>

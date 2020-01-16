@@ -1,3 +1,8 @@
 .companies>div>button{
   margin: 5px;
 }
+
+.btn{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}

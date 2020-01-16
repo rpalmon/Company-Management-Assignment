@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HQ } from '../headquarters-card/hq.model';
+import { Employee } from '../headquarters-card/employee.model';
+import { Company } from '../headquarters-card/co.model';
+
 
 @Component({
   selector: 'app-company-component',
@@ -13,7 +16,7 @@ export class CompanyComponentComponent implements OnInit {
 
   Hq: HQ;
   CompanyName = 'Choose Company';
-  SelectedCompany: any;
+  SelectedCompany: Company;
 
   ngOnInit() {
     this.Hq = JSON.parse(localStorage.getItem('Hq'));
@@ -22,7 +25,8 @@ export class CompanyComponentComponent implements OnInit {
 
   Update(company){
     this.CompanyName = this.Hq.companies[company].name;
-    this.SelectedCompany = this.Hq.companies[company];
+    this.SelectedCompany = JSON.parse(localStorage.getItem('Hq')).companies[company];
     console.dir(this.SelectedCompany);
+
   }
 }

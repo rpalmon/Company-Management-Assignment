@@ -16,4 +16,9 @@ body{
 
 div>a{
   margin: 5px;
+  width: 100px;
+}
+
+.navbar{
+  width: fit-content;
 }

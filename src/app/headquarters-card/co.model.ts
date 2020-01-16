@@ -4,3 +4,4 @@ export class Company {
   name: string;
   employees: Employee[];
 }
+

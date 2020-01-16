@@ -27,9 +27,10 @@ export class HeadquartersCardComponent implements OnInit {
     console.dir(this.Hq);
   }
 
-  addCompany(){
+  addCompany() {
     var newCo = new Company();
     newCo.name = this.name;
+    newCo.employees = new Employee();
 
     this.Hq.companies.push(newCo);
     console.dir(this.Hq);
@@ -37,20 +38,20 @@ export class HeadquartersCardComponent implements OnInit {
     this.name = '';
   }
 
-  deleteCompany(index){
+  deleteCompany(index) {
     console.log(this.Hq.companies[index]);
     this.Hq.companies.splice(index, 1);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
   }
 
-  editCompany(index){
+  editCompany(index) {
     this.Hq.companies[index].name = prompt('Edit '+ this.Hq.companies[index]);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
     this.company = this.Hq.companies[index];
     this.name = '';
   }
 
-  thisHQ(){
+  thisHQ() {
     console.dir(this.Hq);
     return this.Hq;
   }
