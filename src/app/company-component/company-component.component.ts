@@ -12,10 +12,17 @@ export class CompanyComponentComponent implements OnInit {
   constructor() { }
 
   Hq: HQ;
+  CompanyName = 'Choose Company';
+  SelectedCompany: any;
 
   ngOnInit() {
     this.Hq = JSON.parse(localStorage.getItem('Hq'));
     console.dir(this.Hq);
   }
 
+  Update(company){
+    this.CompanyName = this.Hq.companies[company].name;
+    this.SelectedCompany = this.Hq.companies[company];
+    console.dir(this.SelectedCompany);
+  }
 }

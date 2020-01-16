@@ -1,2 +1,13 @@
 <title>Company Management: Company</title>
-<p>company-component works!</p>
+
+<br>
+<div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{CompanyName}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <div *ngFor="let companies of Hq.companies, let i = index;">
+          <button (click)="Update(i)" ngbDropdownItem>{{companies.name}}</button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HQ } from './hq.model';
 import { Company } from './co.model';
-import { employee } from './employee.model';
+import { Employee } from './employee.model';
 
 
 @Component({
