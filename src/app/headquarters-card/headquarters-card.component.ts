@@ -30,7 +30,7 @@ export class HeadquartersCardComponent implements OnInit {
   addCompany() {
     var newCo = new Company();
     newCo.name = this.name;
-    newCo.employees = new Employee();
+    newCo.employees[0] = new Employee();
 
     this.Hq.companies.push(newCo);
     console.dir(this.Hq);

@@ -2,7 +2,30 @@
   margin: 5px;
 }
 
+
 .btn{
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.company{
+  background: rgb(226, 226, 226);
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.company>div>button{
+  background: #007bff;
+  border-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  width: 75px;
+  margin-left: 10px;
+  position: relative;
+
+
 }

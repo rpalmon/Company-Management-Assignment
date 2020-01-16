@@ -5,7 +5,7 @@
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{CompanyName}}</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <div *ngFor="let companies of Hq.companies, let i = index;">
+        <div *ngFor="let companies of Hq.companies, let i = index">
           <button (click)="Update(i)" ngbDropdownItem>{{companies.name}}</button>
         </div>
       </div>
@@ -22,14 +22,15 @@
         <th scope="col">Wage</th>
       </tr>
       <tbody>
-        <tr *ngFor="let employees of SelectedCompany">
+        <tr *ngFor="let employees of SelectedCompany.employees, let i = index">
+          <th scope="row"><button (click)="removeEmployee(i)">Delete</button></th>
           <th>{{employees.FirstName}}</th>
           <th>{{employees.LastName}}</th>
-          <th>{{employees.Wage}}</th>
+          <th>{{employees.Salary}}</th>
         </tr>
       </tbody>
     </table>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Add New Employee</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="AddEmployee()">Add New Employee</button>
   </div>
 
 </div>

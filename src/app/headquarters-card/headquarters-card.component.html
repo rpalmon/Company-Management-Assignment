@@ -18,9 +18,13 @@ Company Name: <input autofocus type="text" [(ngModel)]="name" (keyup.enter)="add
 
 <div class="companies">
   <h1>Companies: </h1>
-  <div *ngFor="let company of Hq.companies, let i = index">
-    Company {{i+1}}: {{Hq.companies[i].name}}
-    <button (click)="editCompany(i)">Edit</button>
-    <button (click)="deleteCompany(i)">Delete</button>
-  </div>
+  <div *ngFor="let company of Hq.companies, let i = index" class="company">
+    <div>
+      Company {{i+1}}: {{Hq.companies[i].name}}
+    </div>
+      <div class="buttons">
+        <button (click)="editCompany(i)">Edit</button>
+        <button (click)="deleteCompany(i)">Delete</button>
+      </div>
+    </div>
 </div>

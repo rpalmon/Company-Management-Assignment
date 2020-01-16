@@ -27,7 +27,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     IndexComponent,
     CompanyComponentComponent,
     MaterialTestingComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
