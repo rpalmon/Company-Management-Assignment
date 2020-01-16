@@ -17,6 +17,8 @@ import { CommonModule } from '@angular/common';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatMenuModule} from '@angular/material/menu';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSliderModule,
     MatMenuModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    NgbModule
 
   ],
   providers: [
