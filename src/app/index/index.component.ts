@@ -19,7 +19,12 @@ export class IndexComponent implements OnInit {
 
 
   ngOnInit() {
-    this.hq = JSON.parse(localStorage.getItem('Hq'));
+    if(JSON.parse(localStorage.getItem('Hq')) != undefined)
+    {
+      this.hq = JSON.parse(localStorage.getItem('Hq'));
+    }else{
+      localStorage.setItem('Hq', JSON.stringify(this.hq));
+    }
   }
 
   getCompany(i){
