@@ -1,1 +1,10 @@
 <title>Company Management: Home</title>
+
+<div class="home">
+  List of Companies
+  <br>
+  <div class="companies" *ngFor="let company of hq.companies, let i = index">
+    {{i+1}}: {{company}}
+  </div>
+  <!-- {{getCompany(0)}} -->
+</div>

@@ -2,11 +2,12 @@
 <br>
 
 
-Company Name: <input type="text" [(ngModel)]="name">
+Company Name: <input autofocus type="text" [(ngModel)]="name" (keyup.enter)="addCompany()">
 <button (click)="addCompany()">Add</button>
 
 <h1>Companies: </h1>
-<p *ngFor="let company of Hq.companies;let i = index" [(ngModel)]="company[i]">Company {{i+1}}: {{company}}
+<div *ngFor="let company of Hq.companies, let i = index">
+  Company {{i+1}}: {{Hq.companies[i]}}
   <button (click)="editCompany(i)">Edit</button>
   <button (click)="deleteCompany(i)">Delete</button>
-</p>
+</div>

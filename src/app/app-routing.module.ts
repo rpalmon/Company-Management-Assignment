@@ -4,16 +4,20 @@ import { HeadquartersCardComponent } from './headquarters-card/headquarters-card
 import { CompanyComponentComponent } from './company-component/company-component.component';
 import { IndexComponent } from './index/index.component';
 
-
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'index'
+  },
+  {
+    path: 'index',
+    component: IndexComponent
+  },
   {
     path: 'hq',
     component: HeadquartersCardComponent
   },
-  {
-    path: '',
-    component:  IndexComponent
-    },
   {
     path: 'company',
     component: CompanyComponentComponent

@@ -13,7 +13,7 @@ export class HeadquartersCardComponent implements OnInit {
   name = '';
   company: any;
 
-  Hq: HQ = new HQ();
+  public Hq: HQ = new HQ();
 
   ngOnInit() {
     this.Hq.name = 'HQ';
@@ -27,7 +27,7 @@ export class HeadquartersCardComponent implements OnInit {
     this.Hq.companies.push(this.name);
     console.dir(this.Hq);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
-
+    this.name = '';
   }
 
   deleteCompany(index){
@@ -39,6 +39,13 @@ export class HeadquartersCardComponent implements OnInit {
   editCompany(index){
     this.Hq.companies[index] = prompt('Edit '+ this.Hq.companies[index]);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
+    this.company = this.Hq.companies[index];
+    this.name = '';
+  }
+
+  thisHQ(){
+    console.dir(this.Hq);
+    return this.Hq;
   }
 
 }

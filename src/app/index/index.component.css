@@ -11,5 +11,10 @@ div>a:hover{
 }
 
 .home{
-  background: gray;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.companies{
+  margin: 5px;
 }
