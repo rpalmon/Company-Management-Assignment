@@ -65,4 +65,19 @@ export class CompanyComponentComponent implements OnInit {
     this.Hq.companies[this.Index].employees = this.SelectedCompany.employees;
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
   }
+
+  editFirstName(index){
+    this.Hq.companies[this.Index].employees[index].FirstName = prompt("Change First Name: ");
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
+  }
+
+  editLastName(index){
+    this.Hq.companies[this.Index].employees[index].LastName = prompt("Change Last Name: ");
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
+  }
+
+  editWage(index){
+    this.Hq.companies[this.Index].employees[index].Salary = parseFloat(prompt("Update Wage: "));
+    localStorage.setItem('Hq', JSON.stringify(this.Hq));
+  }
 }

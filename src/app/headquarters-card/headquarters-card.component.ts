@@ -20,9 +20,7 @@ export class HeadquartersCardComponent implements OnInit {
 
   ngOnInit() {
     this.Hq.name = 'HQ';
-    this.Hq.companies = [
-
-    ];
+    this.Hq.companies = [];
     this.Hq = JSON.parse(localStorage.getItem('Hq'));
     console.dir(this.Hq);
   }
@@ -45,7 +43,7 @@ export class HeadquartersCardComponent implements OnInit {
   }
 
   editCompany(index) {
-    this.Hq.companies[index].name = prompt('Edit '+ this.Hq.companies[index]);
+    this.Hq.companies[index].name = prompt('Edit '+ this.Hq.companies[index].name);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
     this.company = this.Hq.companies[index];
     this.name = '';

@@ -11,7 +11,7 @@
       </div>
     </div>
 </div>
-
+<div>*Unknown Issue: After editing, you have to refresh page to see change*</div>
 <div>
   <div *ngIf="SelectedCompany != undefined">
     <table class="table">
@@ -24,9 +24,9 @@
       <tbody>
         <tr *ngFor="let employees of SelectedCompany.employees, let i = index">
           <th scope="row"><button (click)="removeEmployee(i)" class="btn btn-danger">Delete</button></th>
-          <th>{{employees.FirstName}}  <button class="btn btn-outline-info">Edit</button></th>
-          <th>{{employees.LastName}}   <button class="btn btn-outline-info">Edit</button></th>
-          <th>{{employees.Salary}}   <button class="btn btn-outline-info">Edit</button></th>
+          <th>{{employees.FirstName}}  <button (click)="editFirstName(i)" class="btn btn-outline-info">Edit</button></th>
+          <th>{{employees.LastName}}   <button (click)="editLastName(i)" class="btn btn-outline-info">Edit</button></th>
+          <th>${{employees.Salary}}   <button (click)="editWage(i)" class="btn btn-outline-info">Edit</button></th>
         </tr>
       </tbody>
     </table>

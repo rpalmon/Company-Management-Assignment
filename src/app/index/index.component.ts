@@ -19,15 +19,14 @@ export class IndexComponent implements OnInit {
 
 
   ngOnInit() {
-    if(JSON.parse(localStorage.getItem('Hq')) != undefined)
-    {
+    if (JSON.parse(localStorage.getItem('Hq')) !== null) {
       this.hq = JSON.parse(localStorage.getItem('Hq'));
-    }else{
+    } else {
       localStorage.setItem('Hq', JSON.stringify(this.hq));
     }
   }
 
-  getCompany(i){
+  getCompany(i: string | number) {
     return(this.hq.companies[i]);
   }
 
