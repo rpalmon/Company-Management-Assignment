@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HQ } from './hq.model';
+import { Company } from './co.model';
+import { employee } from './employee.model';
+
 
 @Component({
   selector: 'app-headquarters-card',
@@ -21,10 +24,14 @@ export class HeadquartersCardComponent implements OnInit {
 
     ];
     this.Hq = JSON.parse(localStorage.getItem('Hq'));
+    console.dir(this.Hq);
   }
 
   addCompany(){
-    this.Hq.companies.push(this.name);
+    var newCo = new Company();
+    newCo.name = this.name;
+
+    this.Hq.companies.push(newCo);
     console.dir(this.Hq);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
     this.name = '';
@@ -37,7 +44,7 @@ export class HeadquartersCardComponent implements OnInit {
   }
 
   editCompany(index){
-    this.Hq.companies[index] = prompt('Edit '+ this.Hq.companies[index]);
+    this.Hq.companies[index].name = prompt('Edit '+ this.Hq.companies[index]);
     localStorage.setItem('Hq', JSON.stringify(this.Hq));
     this.company = this.Hq.companies[index];
     this.name = '';

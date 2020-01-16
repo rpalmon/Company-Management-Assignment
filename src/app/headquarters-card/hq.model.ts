@@ -1,5 +1,6 @@
+import { Company } from './co.model';
 
 export class HQ {
   name: string;
-  companies: string[];
+  companies: Company[];
 }

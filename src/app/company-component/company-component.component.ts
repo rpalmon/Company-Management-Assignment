@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HQ } from '../headquarters-card/hq.model';
 
 @Component({
   selector: 'app-company-component',
@@ -10,7 +11,11 @@ export class CompanyComponentComponent implements OnInit {
   title = "Company Management";
   constructor() { }
 
+  Hq: HQ;
+
   ngOnInit() {
+    this.Hq = JSON.parse(localStorage.getItem('Hq'));
+    console.dir(this.Hq);
   }
 
 }
